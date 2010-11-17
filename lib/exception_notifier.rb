@@ -58,6 +58,9 @@ class ExceptionNotifier < ActionMailer::Base
   def self.trace(subject="", data={}, &block)
     begin
       yield
+    rescue SystemExit => exception
+      # Do nothing but raise
+      raise exception
     rescue Exception, StandardError => exception
       deliver_exception_notification_without_request exception, subject, data
       raise exception
