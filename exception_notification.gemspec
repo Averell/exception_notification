@@ -1,12 +1,12 @@
 Gem::Specification.new do |s|
-  s.name = "jeremyevans-exception_notification"
+  s.name = "averell-exception_notification"
   s.version = "1.0.20100224"
   s.date = "2010-02-24"
   s.summary = "Gemified exception_notification rails plugin, compatible with Rails 2.3.5 with RailsXss"
-  s.email = "code@jeremyevans.net"
-  s.homepage = "http://github.com/jeremyevans/exception_notification"
+  s.email = "FOURDJGAAPHP@spammotel.com"
+  s.homepage = "http://github.com/averell/exception_notification"
   s.has_rdoc = true
-  s.authors = ["Rails Core Team"]
+  s.authors = ["Averell", "Rails Core Team"]
   s.files = [
     "lib/exception_notifiable.rb",
     "lib/exception_notification.rb",
