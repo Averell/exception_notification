@@ -1,6 +1,12 @@
 A <%=raw @exception.class %> occurred:
 
-  <%=raw @exception.message %>
+  <%=
+    out = raw @exception.message
+    if @exception.inspect.any? && !@exception.inspect.starts_with?("#<#{@exception.class}") && @exception.message != @exception.inspect
+      out << "\n  / #{raw(@exception.inspect)}"
+    end
+    out
+  %>
   <%=raw @backtrace.first %>
 
 <%=raw @sections.map { |section| render_section(section) }.join %>
